@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>Image Distortion Demo</title>
+
+<style>
+body {
+  margin: 0;
+  padding: 40px;
+  background: #f5f5f5;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+}
+
+img {
+  display: block;
+}
+
+/* 左圖：正常 */
+.img-left {
+  width: 33%;
+  height: 300px;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+/* 中間 */
+.img-center {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid #121212;
+  object-fit: cover;
+}
+
+/* 右圖：嚴重變形 */
+.img-right {
+  width: 33%;
+  height: 300px;   /* ⭐ 拉超高 → 很明顯 */
+  /* 沒有 object-fit */
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <img class="img-left" src="0011034484250879_b.jpg">
+  <img class="img-center" src="https://picsum.photos/300">
+  <img class="img-right" src="0011034484250879_b.jpg">
+</div>
+
+</body>
+</html>
